@@ -130,7 +130,7 @@ const Form = () => {
             {isRegister && (
               <>
                 <TextField
-                  label="First Name"
+                  label="Nombre"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.firstName}
@@ -142,7 +142,7 @@ const Form = () => {
                   sx={{ gridColumn: "span 2" }}
                 />
                 <TextField
-                  label="Last Name"
+                  label="Apellido"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.lastName}
@@ -152,7 +152,7 @@ const Form = () => {
                   sx={{ gridColumn: "span 2" }}
                 />
                 <TextField
-                  label="Location"
+                  label="Direccion"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.location}
@@ -162,7 +162,7 @@ const Form = () => {
                   sx={{ gridColumn: "span 4" }}
                 />
                 <TextField
-                  label="Occupation"
+                  label="Ocupacion"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.occupation}
@@ -210,7 +210,7 @@ const Form = () => {
             )}
 
             <TextField
-              label="Email"
+              label="Correo"
               onBlur={handleBlur}
               onChange={handleChange}
               value={values.email}
@@ -220,7 +220,7 @@ const Form = () => {
               sx={{ gridColumn: "span 4" }}
             />
             <TextField
-              label="Password"
+              label="Contraseña"
               type="password"
               onBlur={handleBlur}
               onChange={handleChange}

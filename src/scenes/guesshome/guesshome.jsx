@@ -1,15 +1,14 @@
 import { Box, useMediaQuery } from "@mui/material";
-import { useSelector } from "react-redux";
-import Navbar from "scenes/navbar";
 
-import MyPostWidget from "scenes/widgets/MyPostWidget";
-import PostsWidget from "scenes/widgets/PostsWidget";
+import Navbar from "../guesnavbar/guessnavbar";
+
 import AdvertWidget from "scenes/widgets/AdvertWidget";
 
 
-const HomePage = () => {
+
+const GuessPage = () => {
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
-  const { _id, picturePath } = useSelector((state) => state.user);
+  
 
   return (
     <Box>
@@ -23,13 +22,15 @@ const HomePage = () => {
       >
         <Box flexBasis={isNonMobileScreens ? "15%" : undefined}>
         <AdvertWidget />
+        
+       
         </Box>
         <Box
           flexBasis={isNonMobileScreens ? "89%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
         >
-          <MyPostWidget picturePath={picturePath} />
-          <PostsWidget userId={_id} />
+      
+      
         </Box>
         {isNonMobileScreens && (
           <Box flexBasis="26%">
@@ -44,4 +45,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default GuessPage;
