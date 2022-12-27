@@ -33,6 +33,13 @@ function App() {
               element={isAuth ? <HomePage/> : <Navigate to="/" />}
             />                
           
+
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/home"
+              element={isAuth ? <HomePage /> : <Navigate to="/" />}
+            />
+            
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
