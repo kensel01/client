@@ -3,6 +3,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import Navbar from "../guesnavbar/guessnavbar";
 
 import AdvertWidget from "scenes/widgets/AdvertWidget";
+import GuessPostsWidget from "scenes/widgets/GuesspostsWidget";
 
 
 
@@ -22,15 +23,13 @@ const GuessPage = () => {
       >
         <Box flexBasis={isNonMobileScreens ? "15%" : undefined}>
         <AdvertWidget />
-        
-       
         </Box>
         <Box
-          flexBasis={isNonMobileScreens ? "89%" : undefined}
-          mt={isNonMobileScreens ? undefined : "2rem"}
+          flexBasis={isNonMobileScreens ? "85%" : undefined}
+          mt={isNonMobileScreens ? undefined : "1.75rem"}
         >
       
-      
+        <GuessPostsWidget />
         </Box>
         {isNonMobileScreens && (
           <Box flexBasis="26%">
